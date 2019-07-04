@@ -1,0 +1,119 @@
+﻿<Window x:Class="GraduateWork.Client.Wpf.View.RegistrationView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:System="clr-namespace:System;assembly=mscorlib"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:c="clr-namespace:GraduateWork.Client.Wpf.Converter"
+      xmlns:local="clr-namespace:GraduateWork.Client.Wpf.ViewModel"
+      mc:Ignorable="d" d:DesignHeight="550" d:DesignWidth="425"
+      ResizeMode="CanResize"
+      MinHeight="550" MinWidth="480"
+      MaxHeight="600" MaxWidth="550"
+      Title="Telemedicine technologies" 
+      SizeToContent="WidthAndHeight"
+      Name="RegistrationWindow" 
+      d:DataContext="{d:DesignInstance local:RegistrationViewModel}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Image/image.jpg"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" 
+               Grid.Column="0" 
+               Content="Registration in the telemedicine system"
+               Grid.ColumnSpan="2"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"  FontFamily="Comic Sans MS" FontWeight="UltraBold" />
+
+        <Label Grid.Row="1" Grid.Column="0"
+               Content="UserName"
+               VerticalAlignment="Center" HorizontalAlignment="Center"  FontFamily="Comic Sans MS" FontWeight="UltraBold" />
+        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"
+                 Text="{Binding UserName, Mode=TwoWay}" Margin="10,13,26,12" Width="283"/>
+        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontWeight="UltraBold" 
+               Content="Password" />
+        <PasswordBox Grid.Row="2" Grid.Column="1"
+                     Name="passwordBox" Margin="10,10,26,14"/>
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontWeight="UltraBold" 
+               Content="Repeat password"  />
+        <PasswordBox Grid.Row="3" Grid.Column="1"
+                 Name="confirmPasswordBox" Margin="10,10,26,10" />
+        <Label Grid.Row="4" Grid.Column="0"
+               Content="First Name" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Comic Sans MS" FontWeight="UltraBold" />
+        <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                 Text="{Binding FirstName, Mode=TwoWay}" Margin="10,13,26,9" Width="283" Height="22"/>
+        <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Comic Sans MS" FontWeight="UltraBold" 
+               Content="Last Name"/>
+        <TextBox Grid.Row="5" Grid.Column="1"
+                 Text="{Binding LastName, Mode=TwoWay}" Margin="10,10,26,10"/>
+        <Label Grid.Row="6" Grid.Column="0"
+               Content="E-mail address"
+               HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontWeight="UltraBold" />
+        <TextBox Grid.Row="6" Grid.Column="1"                    
+                 Text="{Binding Email, Mode=TwoWay}" Margin="10,10,26,10"/>
+        <Label Grid.Row="7" Grid.Column="0"  FontFamily="Comic Sans MS" FontWeight="UltraBold" 
+               Content="Phone Number" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="7" Grid.Column="1" 
+                 Text="{Binding PhoneNumber, Mode=TwoWay}" Margin="10,10,26,10"/>
+        <Label Grid.Row="8" Grid.Column="0" 
+               Content="Role of user in system" FontFamily="Comic Sans MS" FontWeight="UltraBold"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ComboBox Name="roleList" Grid.Row="8" Grid.Column="1" FontFamily="Comic Sans MS" FontWeight="UltraBold"  Text="{Binding Role}" Margin="10,10,26,10" >
+            <TextBlock>Doctor</TextBlock>
+            <TextBlock>Patient</TextBlock>
+        </ComboBox>
+        <Label Grid.Row="9" Grid.Column="0"  FontFamily="Comic Sans MS" FontWeight="UltraBold" 
+               Content="Data of birth" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <DatePicker Name="datePicker" IsDropDownOpen="False" Grid.Row="9" Grid.Column="1" 
+                    DisplayDate="{x:Static System:DateTime.Now}"  FontFamily="Comic Sans MS" FontWeight="UltraBold" 
+                    DisplayDateStart="01/01/1960" 
+                    DisplayDateEnd="01/01/2100" SelectedDateFormat="Short"
+                    SelectedDate="{Binding Path=DataOfBirth, Mode=TwoWay}" Margin="10,10,26,0"/>
+
+        <Button Grid.Row="11" Grid.Column="1"
+                Content="Registration" FontFamily="Comic Sans MS" FontWeight="UltraBold" 
+                Command="{Binding RegistrationButtonCommand}"
+                IsEnabled="{Binding IsRegisterButtonEnable}" Margin="143,10,26,10">
+            <Button.Resources>
+                <c:MultiValueConverter x:Key="MvConverter"></c:MultiValueConverter>
+            </Button.Resources>
+            <Button.CommandParameter>
+                <MultiBinding Converter="{StaticResource MvConverter}">
+                    <Binding ElementName="passwordBox"/>
+                    <Binding ElementName="confirmPasswordBox"/>
+                </MultiBinding>
+            </Button.CommandParameter>
+        </Button>
+        
+        <Button Grid.Row="11"
+                Content="Back" FontFamily="Comic Sans MS" FontWeight="UltraBold" 
+                Command="{Binding BackCommandButton}"
+                CommandParameter="{Binding ElementName=RegistrationWindow}" Margin="12,10,10,10"/>
+        
+        <TextBlock Text="{Binding ErrorLabel}" 
+                   Foreground="Red" FontFamily="Comic Sans MS" FontWeight="UltraBold" 
+                   Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2"
+                   TextWrapping="Wrap"/>
+    </Grid>
+</Window>

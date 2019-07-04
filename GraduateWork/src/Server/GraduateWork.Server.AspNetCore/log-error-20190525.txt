@@ -1,0 +1,707 @@
+2019-05-25 13:56:06.432 +03:00 [Warning] There are multiple relationships between '"PrivateChatEntity"' and '"UserInfoEntity"' without configured foreign key properties causing EF to create shadow properties on '"PrivateChatEntity"' with names dependent on the discovery order.
+2019-05-25 13:56:06.809 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 13:56:09.094 +03:00 [Information] Executed DbCommand ("47"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+                    SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+                    FROM information_schema.tables
+                    WHERE table_type = 'BASE TABLE' AND table_schema NOT IN ('pg_catalog', 'information_schema')"
+2019-05-25 13:56:09.267 +03:00 [Information] Executed DbCommand ("54"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');"
+2019-05-25 13:56:09.391 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');"
+2019-05-25 13:56:09.421 +03:00 [Information] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2019-05-25 13:56:09.459 +03:00 [Information] No migrations were applied. The database is already up to date.
+2019-05-25 13:56:09.485 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 13:56:10.207 +03:00 [Information] Executed DbCommand ("76"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"ConcurrencyStamp\", r.\"Name\", r.\"NormalizedName\"
+FROM \"AspNetRoles\" AS r
+WHERE r.\"NormalizedName\" = @__normalizedName_0
+LIMIT 1"
+2019-05-25 13:56:10.404 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"ConcurrencyStamp\", r.\"Name\", r.\"NormalizedName\"
+FROM \"AspNetRoles\" AS r
+WHERE r.\"NormalizedName\" = @__normalizedName_0
+LIMIT 1"
+2019-05-25 13:56:10.503 +03:00 [Information] Executed DbCommand ("68"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.\"Id\", u.\"AccessFailedCount\", u.\"ConcurrencyStamp\", u.\"Discriminator\", u.\"Email\", u.\"EmailConfirmed\", u.\"LockoutEnabled\", u.\"LockoutEnd\", u.\"NormalizedEmail\", u.\"NormalizedUserName\", u.\"PasswordHash\", u.\"PhoneNumber\", u.\"PhoneNumberConfirmed\", u.\"SecurityStamp\", u.\"TwoFactorEnabled\", u.\"UserName\", u.\"Data\", u.\"DateOfBirth\", u.\"FirstName\", u.\"LastName\", u.\"Role\", u.\"UserId\"
+FROM \"AspNetUsers\" AS u
+WHERE (u.\"Discriminator\" = 'UserInfoEntity') AND (u.\"NormalizedUserName\" = @__normalizedUserName_0)
+LIMIT 1"
+2019-05-25 13:56:12.539 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+2019-05-25 13:56:13.924 +03:00 [Information] Request finished in 1389.2632ms 200 text/html
+2019-05-25 13:56:14.718 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+2019-05-25 13:56:15.141 +03:00 [Information] Request finished in 425.2555ms 200 application/json;charset=utf-8
+2019-05-25 13:56:27.456 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Authorization application/json 37
+2019-05-25 13:56:27.615 +03:00 [Information] Route matched with "{action = \"AuthorizationAsync\", controller = \"Authorization\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 13:56:27.895 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.UserLoginModel"]) - Validation state: Valid
+2019-05-25 13:56:27.902 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 13:56:27.926 +03:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__username_0='?' (Size = 256), @__password_1='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND ((r.\"UserName\" = @__username_0) AND (r.\"PasswordHash\" = @__password_1))
+LIMIT 1"
+2019-05-25 13:56:28.044 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 142.0284ms.
+2019-05-25 13:56:28.070 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.AuthorizationResponse"'.
+2019-05-25 13:56:28.091 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)" in 467.5343ms
+2019-05-25 13:56:28.100 +03:00 [Information] Request finished in 643.8998ms 200 application/json; charset=utf-8
+2019-05-25 13:56:28.189 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Connected  
+2019-05-25 13:56:28.198 +03:00 [Information] Route matched with "{action = \"GetConnectionAsync\", controller = \"Connected\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 13:56:28.355 +03:00 [Information] Successfully validated the token.
+2019-05-25 13:56:28.381 +03:00 [Information] Authorization was successful.
+2019-05-25 13:56:28.399 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)" - Validation state: Valid
+2019-05-25 13:56:28.406 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 5.1043ms.
+2019-05-25 13:56:28.409 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.Connected"'.
+2019-05-25 13:56:28.413 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)" in 212.5275ms
+2019-05-25 13:56:28.441 +03:00 [Information] Request finished in 227.2005ms 200 application/json; charset=utf-8
+2019-05-25 13:56:28.444 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 13:56:28.462 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 13:56:28.467 +03:00 [Information] Successfully validated the token.
+2019-05-25 13:56:28.470 +03:00 [Information] Authorization was successful.
+2019-05-25 13:56:28.534 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 13:56:28.545 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 13:56:28.576 +03:00 [Information] Executed DbCommand ("9"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 13:56:28.616 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 13:56:28.630 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 13:56:28.634 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 97.7816ms.
+2019-05-25 13:56:28.636 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 13:56:28.649 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 184.0545ms
+2019-05-25 13:56:28.653 +03:00 [Information] Request finished in 208.0859ms 200 application/json; charset=utf-8
+2019-05-25 13:56:28.686 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/CountMessages application/json 67
+2019-05-25 13:56:28.694 +03:00 [Information] Route matched with "{action = \"CountMessagesAsync\", controller = \"CountMessages\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 13:56:28.701 +03:00 [Information] Successfully validated the token.
+2019-05-25 13:56:28.704 +03:00 [Information] Authorization was successful.
+2019-05-25 13:56:28.732 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.CountMessageForPersonalPage"]) - Validation state: Valid
+2019-05-25 13:56:28.738 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 13:56:28.793 +03:00 [Information] Executed DbCommand ("44"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"FirstUserInfoId\", p.\"FirstUserInfoId1\", p.\"IsActive\", p.\"SecondUserInfoId\", p.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS p"
+2019-05-25 13:56:28.801 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 65.6539ms.
+2019-05-25 13:56:28.804 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.CountMessageForPersonalPage"'.
+2019-05-25 13:56:28.808 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)" in 112.1653ms
+2019-05-25 13:56:28.811 +03:00 [Information] Request finished in 124.2664ms 200 application/json; charset=utf-8
+2019-05-25 13:56:35.987 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 13:56:35.991 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 13:56:35.994 +03:00 [Information] Successfully validated the token.
+2019-05-25 13:56:35.997 +03:00 [Information] Authorization was successful.
+2019-05-25 13:56:36.002 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 13:56:36.006 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 13:56:36.010 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 13:56:36.015 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 13:56:36.019 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 13.8338ms.
+2019-05-25 13:56:36.022 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 13:56:36.025 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 31.6631ms
+2019-05-25 13:56:36.029 +03:00 [Information] Request finished in 40.6784ms 200 application/json; charset=utf-8
+2019-05-25 13:56:38.713 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/HistoryChats application/json 74
+2019-05-25 13:56:38.722 +03:00 [Information] Route matched with "{action = \"HistoryChatsAsync\", controller = \"HistoryChats\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 13:56:38.726 +03:00 [Information] Successfully validated the token.
+2019-05-25 13:56:38.729 +03:00 [Information] Authorization was successful.
+2019-05-25 13:56:38.740 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.SavedChats"]) - Validation state: Valid
+2019-05-25 13:56:38.762 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 13:56:38.807 +03:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"FirstUserInfoId\", r.\"FirstUserInfoId1\", r.\"IsActive\", r.\"SecondUserInfoId\", r.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS r
+WHERE r.\"FirstUserInfoId\" = @__userId_0"
+2019-05-25 13:56:38.818 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"FirstUserInfoId\", r.\"FirstUserInfoId1\", r.\"IsActive\", r.\"SecondUserInfoId\", r.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS r
+WHERE r.\"SecondUserInfoId\" = @__userId_0"
+2019-05-25 13:56:38.821 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 78.4289ms.
+2019-05-25 13:56:38.825 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.SavedChats"'.
+2019-05-25 13:56:38.829 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)" in 104.3423ms
+2019-05-25 13:56:38.833 +03:00 [Information] Request finished in 118.5748ms 200 application/json; charset=utf-8
+2019-05-25 13:56:38.845 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 13:56:38.849 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 13:56:38.852 +03:00 [Information] Successfully validated the token.
+2019-05-25 13:56:38.856 +03:00 [Information] Authorization was successful.
+2019-05-25 13:56:38.861 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 13:56:38.865 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 13:56:38.871 +03:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 13:56:38.878 +03:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 13:56:38.882 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 17.589ms.
+2019-05-25 13:56:38.885 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 13:56:38.889 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 36.4483ms
+2019-05-25 13:56:38.892 +03:00 [Information] Request finished in 48.4072ms 200 application/json; charset=utf-8
+2019-05-25 13:57:27.818 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/chatHub/negotiate  0
+2019-05-25 13:57:27.889 +03:00 [Information] Request finished in 71.2216ms 200 application/json
+2019-05-25 13:57:27.993 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/chatHub?id=owOkOWyxJ7INIHRw2IOLlg  
+2019-05-25 13:57:28.208 +03:00 [Information] Completed connection handshake. Using HubProtocol '"json"'.
+2019-05-25 14:00:24.185 +03:00 [Warning] There are multiple relationships between '"PrivateChatEntity"' and '"UserInfoEntity"' without configured foreign key properties causing EF to create shadow properties on '"PrivateChatEntity"' with names dependent on the discovery order.
+2019-05-25 14:00:24.453 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:00:25.462 +03:00 [Information] Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+                    SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+                    FROM information_schema.tables
+                    WHERE table_type = 'BASE TABLE' AND table_schema NOT IN ('pg_catalog', 'information_schema')"
+2019-05-25 14:00:25.533 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');"
+2019-05-25 14:00:25.592 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');"
+2019-05-25 14:00:25.604 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2019-05-25 14:00:25.627 +03:00 [Information] No migrations were applied. The database is already up to date.
+2019-05-25 14:00:25.721 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:00:26.193 +03:00 [Information] Executed DbCommand ("18"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"ConcurrencyStamp\", r.\"Name\", r.\"NormalizedName\"
+FROM \"AspNetRoles\" AS r
+WHERE r.\"NormalizedName\" = @__normalizedName_0
+LIMIT 1"
+2019-05-25 14:00:26.392 +03:00 [Information] Executed DbCommand ("23"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"ConcurrencyStamp\", r.\"Name\", r.\"NormalizedName\"
+FROM \"AspNetRoles\" AS r
+WHERE r.\"NormalizedName\" = @__normalizedName_0
+LIMIT 1"
+2019-05-25 14:00:26.525 +03:00 [Information] Executed DbCommand ("11"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.\"Id\", u.\"AccessFailedCount\", u.\"ConcurrencyStamp\", u.\"Discriminator\", u.\"Email\", u.\"EmailConfirmed\", u.\"LockoutEnabled\", u.\"LockoutEnd\", u.\"NormalizedEmail\", u.\"NormalizedUserName\", u.\"PasswordHash\", u.\"PhoneNumber\", u.\"PhoneNumberConfirmed\", u.\"SecurityStamp\", u.\"TwoFactorEnabled\", u.\"UserName\", u.\"Data\", u.\"DateOfBirth\", u.\"FirstName\", u.\"LastName\", u.\"Role\", u.\"UserId\"
+FROM \"AspNetUsers\" AS u
+WHERE (u.\"Discriminator\" = 'UserInfoEntity') AND (u.\"NormalizedUserName\" = @__normalizedUserName_0)
+LIMIT 1"
+2019-05-25 14:00:28.613 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+2019-05-25 14:00:29.554 +03:00 [Information] Request finished in 951.611ms 200 text/html
+2019-05-25 14:00:29.901 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+2019-05-25 14:00:30.226 +03:00 [Information] Request finished in 322.1445ms 200 application/json;charset=utf-8
+2019-05-25 14:00:43.155 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Authorization application/json 37
+2019-05-25 14:00:43.222 +03:00 [Information] Route matched with "{action = \"AuthorizationAsync\", controller = \"Authorization\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:00:43.386 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.UserLoginModel"]) - Validation state: Valid
+2019-05-25 14:00:43.396 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:00:43.419 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?' (Size = 256), @__password_1='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND ((r.\"UserName\" = @__username_0) AND (r.\"PasswordHash\" = @__password_1))
+LIMIT 1"
+2019-05-25 14:00:43.489 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 94.2393ms.
+2019-05-25 14:00:43.508 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.AuthorizationResponse"'.
+2019-05-25 14:00:43.527 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)" in 296.1839ms
+2019-05-25 14:00:43.534 +03:00 [Information] Request finished in 378.4321ms 200 application/json; charset=utf-8
+2019-05-25 14:00:43.619 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Connected  
+2019-05-25 14:00:43.626 +03:00 [Information] Route matched with "{action = \"GetConnectionAsync\", controller = \"Connected\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:00:43.688 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:00:43.702 +03:00 [Information] Authorization was successful.
+2019-05-25 14:00:43.710 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)" - Validation state: Valid
+2019-05-25 14:00:43.723 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 10.6407ms.
+2019-05-25 14:00:43.727 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.Connected"'.
+2019-05-25 14:00:43.730 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)" in 101.7852ms
+2019-05-25 14:00:43.733 +03:00 [Information] Request finished in 113.1008ms 200 application/json; charset=utf-8
+2019-05-25 14:00:43.758 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:00:43.766 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:00:43.771 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:00:43.774 +03:00 [Information] Authorization was successful.
+2019-05-25 14:00:43.796 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:00:43.806 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:00:43.823 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:00:43.845 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:00:43.855 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:00:43.859 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 59.1357ms.
+2019-05-25 14:00:43.861 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:00:43.879 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 109.387ms
+2019-05-25 14:00:43.883 +03:00 [Information] Request finished in 123.4206ms 200 application/json; charset=utf-8
+2019-05-25 14:00:43.920 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/CountMessages application/json 67
+2019-05-25 14:00:43.939 +03:00 [Information] Route matched with "{action = \"CountMessagesAsync\", controller = \"CountMessages\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:00:43.943 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:00:43.946 +03:00 [Information] Authorization was successful.
+2019-05-25 14:00:43.963 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.CountMessageForPersonalPage"]) - Validation state: Valid
+2019-05-25 14:00:43.972 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:00:43.992 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"FirstUserInfoId\", p.\"FirstUserInfoId1\", p.\"IsActive\", p.\"SecondUserInfoId\", p.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS p"
+2019-05-25 14:00:43.997 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 31.9911ms.
+2019-05-25 14:00:44.000 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.CountMessageForPersonalPage"'.
+2019-05-25 14:00:44.005 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)" in 63.61ms
+2019-05-25 14:00:44.008 +03:00 [Information] Request finished in 87.5413ms 200 application/json; charset=utf-8
+2019-05-25 14:00:45.472 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:00:45.476 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:00:45.479 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:00:45.482 +03:00 [Information] Authorization was successful.
+2019-05-25 14:00:45.491 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:00:45.495 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:00:45.503 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:00:45.510 +03:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:00:45.514 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 20.587ms.
+2019-05-25 14:00:45.516 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:00:45.520 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 41.0794ms
+2019-05-25 14:00:45.525 +03:00 [Information] Request finished in 50.5009ms 200 application/json; charset=utf-8
+2019-05-25 14:00:46.953 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/HistoryChats application/json 74
+2019-05-25 14:00:46.968 +03:00 [Information] Route matched with "{action = \"HistoryChatsAsync\", controller = \"HistoryChats\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:00:46.972 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:00:46.976 +03:00 [Information] Authorization was successful.
+2019-05-25 14:00:46.983 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.SavedChats"]) - Validation state: Valid
+2019-05-25 14:00:46.995 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:00:47.012 +03:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"FirstUserInfoId\", r.\"FirstUserInfoId1\", r.\"IsActive\", r.\"SecondUserInfoId\", r.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS r
+WHERE r.\"FirstUserInfoId\" = @__userId_0"
+2019-05-25 14:00:47.021 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"FirstUserInfoId\", r.\"FirstUserInfoId1\", r.\"IsActive\", r.\"SecondUserInfoId\", r.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS r
+WHERE r.\"SecondUserInfoId\" = @__userId_0"
+2019-05-25 14:00:47.024 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 37.7673ms.
+2019-05-25 14:00:47.027 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.SavedChats"'.
+2019-05-25 14:00:47.032 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)" in 60.5555ms
+2019-05-25 14:00:47.035 +03:00 [Information] Request finished in 81.5549ms 200 application/json; charset=utf-8
+2019-05-25 14:00:47.040 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:00:47.044 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:00:47.046 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:00:47.049 +03:00 [Information] Authorization was successful.
+2019-05-25 14:00:47.054 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:00:47.058 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:00:47.063 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:00:47.068 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:00:47.071 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 15.1935ms.
+2019-05-25 14:00:47.075 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:00:47.077 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 31.3851ms
+2019-05-25 14:00:47.081 +03:00 [Information] Request finished in 39.9407ms 200 application/json; charset=utf-8
+2019-05-25 14:01:12.022 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/chatHub/negotiate  0
+2019-05-25 14:01:12.043 +03:00 [Information] Request finished in 21.2718ms 200 application/json
+2019-05-25 14:01:12.120 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/chatHub?id=JKtJfQg89v4CoG-_j4Fq7Q  
+2019-05-25 14:01:12.255 +03:00 [Information] Completed connection handshake. Using HubProtocol '"json"'.
+2019-05-25 14:04:17.300 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Authorization application/json 41
+2019-05-25 14:04:17.302 +03:00 [Information] Route matched with "{action = \"AuthorizationAsync\", controller = \"Authorization\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:04:17.313 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.UserLoginModel"]) - Validation state: Valid
+2019-05-25 14:04:17.317 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:04:17.322 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__username_0='?' (Size = 256), @__password_1='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND ((r.\"UserName\" = @__username_0) AND (r.\"PasswordHash\" = @__password_1))
+LIMIT 1"
+2019-05-25 14:04:17.325 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 9.9959ms.
+2019-05-25 14:04:17.328 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.AuthorizationResponse"'.
+2019-05-25 14:04:17.331 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)" in 25.8736ms
+2019-05-25 14:04:17.335 +03:00 [Information] Request finished in 35.8973ms 200 application/json; charset=utf-8
+2019-05-25 14:04:17.440 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Connected  
+2019-05-25 14:04:17.443 +03:00 [Information] Route matched with "{action = \"GetConnectionAsync\", controller = \"Connected\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:04:17.448 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:04:17.451 +03:00 [Information] Authorization was successful.
+2019-05-25 14:04:17.454 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)" - Validation state: Valid
+2019-05-25 14:04:17.457 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.2402ms.
+2019-05-25 14:04:17.459 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.Connected"'.
+2019-05-25 14:04:17.462 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)" in 15.8853ms
+2019-05-25 14:04:17.465 +03:00 [Information] Request finished in 25.1599ms 200 application/json; charset=utf-8
+2019-05-25 14:04:17.495 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:04:17.497 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:04:17.500 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:04:17.502 +03:00 [Information] Authorization was successful.
+2019-05-25 14:04:17.506 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:04:17.509 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:04:17.514 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:04:17.519 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:04:17.522 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 12.7649ms.
+2019-05-25 14:04:17.524 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:04:17.527 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 27.7864ms
+2019-05-25 14:04:17.530 +03:00 [Information] Request finished in 34.4328ms 200 application/json; charset=utf-8
+2019-05-25 14:04:17.556 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/CountMessages application/json 67
+2019-05-25 14:04:17.559 +03:00 [Information] Route matched with "{action = \"CountMessagesAsync\", controller = \"CountMessages\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:04:17.563 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:04:17.567 +03:00 [Information] Authorization was successful.
+2019-05-25 14:04:17.572 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.CountMessageForPersonalPage"]) - Validation state: Valid
+2019-05-25 14:04:17.575 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:04:17.579 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"FirstUserInfoId\", p.\"FirstUserInfoId1\", p.\"IsActive\", p.\"SecondUserInfoId\", p.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS p"
+2019-05-25 14:04:17.582 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 7.5003ms.
+2019-05-25 14:04:17.585 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.CountMessageForPersonalPage"'.
+2019-05-25 14:04:17.588 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)" in 26.0401ms
+2019-05-25 14:04:17.590 +03:00 [Information] Request finished in 33.8966ms 200 application/json; charset=utf-8
+2019-05-25 14:04:19.294 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:04:19.304 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:04:19.310 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:04:19.318 +03:00 [Information] Authorization was successful.
+2019-05-25 14:04:19.325 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:04:19.328 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:04:19.336 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:04:19.342 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:04:19.352 +03:00 [Information] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:04:19.355 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 28.0928ms.
+2019-05-25 14:04:19.358 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:04:19.361 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 54.4477ms
+2019-05-25 14:04:19.363 +03:00 [Information] Request finished in 73.0098ms 200 application/json; charset=utf-8
+2019-05-25 14:04:21.358 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/HistoryChats application/json 74
+2019-05-25 14:04:21.360 +03:00 [Information] Route matched with "{action = \"HistoryChatsAsync\", controller = \"HistoryChats\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:04:21.363 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:04:21.369 +03:00 [Information] Authorization was successful.
+2019-05-25 14:04:21.373 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.SavedChats"]) - Validation state: Valid
+2019-05-25 14:04:21.377 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:04:21.382 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"FirstUserInfoId\", r.\"FirstUserInfoId1\", r.\"IsActive\", r.\"SecondUserInfoId\", r.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS r
+WHERE r.\"FirstUserInfoId\" = @__userId_0"
+2019-05-25 14:04:21.388 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"FirstUserInfoId\", r.\"FirstUserInfoId1\", r.\"IsActive\", r.\"SecondUserInfoId\", r.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS r
+WHERE r.\"SecondUserInfoId\" = @__userId_0"
+2019-05-25 14:04:21.391 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 15.1516ms.
+2019-05-25 14:04:21.394 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.SavedChats"'.
+2019-05-25 14:04:21.398 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)" in 33.4652ms
+2019-05-25 14:04:21.404 +03:00 [Information] Request finished in 43.394ms 200 application/json; charset=utf-8
+2019-05-25 14:04:21.409 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:04:21.412 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:04:21.415 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:04:21.423 +03:00 [Information] Authorization was successful.
+2019-05-25 14:04:21.428 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:04:21.431 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:04:21.436 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:04:21.441 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:04:21.446 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:04:21.449 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 18.4672ms.
+2019-05-25 14:04:21.452 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:04:21.455 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 40.2039ms
+2019-05-25 14:04:21.459 +03:00 [Information] Request finished in 48.2644ms 200 application/json; charset=utf-8
+2019-05-25 14:04:33.762 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/chatHub/negotiate  0
+2019-05-25 14:04:33.765 +03:00 [Information] Request finished in 2.8777ms 200 application/json
+2019-05-25 14:04:33.850 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/chatHub?id=MZgqaytO3H1GrrtCALCBbA  
+2019-05-25 14:04:33.934 +03:00 [Information] Completed connection handshake. Using HubProtocol '"json"'.
+2019-05-25 14:07:17.983 +03:00 [Information] Request finished in 365863.7919ms 101 
+2019-05-25 14:07:36.317 +03:00 [Warning] There are multiple relationships between '"PrivateChatEntity"' and '"UserInfoEntity"' without configured foreign key properties causing EF to create shadow properties on '"PrivateChatEntity"' with names dependent on the discovery order.
+2019-05-25 14:07:36.604 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:07:37.512 +03:00 [Information] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+                    SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+                    FROM information_schema.tables
+                    WHERE table_type = 'BASE TABLE' AND table_schema NOT IN ('pg_catalog', 'information_schema')"
+2019-05-25 14:07:37.578 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');"
+2019-05-25 14:07:37.635 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');"
+2019-05-25 14:07:37.651 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2019-05-25 14:07:37.677 +03:00 [Information] No migrations were applied. The database is already up to date.
+2019-05-25 14:07:37.698 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:07:38.186 +03:00 [Information] Executed DbCommand ("12"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"ConcurrencyStamp\", r.\"Name\", r.\"NormalizedName\"
+FROM \"AspNetRoles\" AS r
+WHERE r.\"NormalizedName\" = @__normalizedName_0
+LIMIT 1"
+2019-05-25 14:07:38.342 +03:00 [Information] Executed DbCommand ("26"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"ConcurrencyStamp\", r.\"Name\", r.\"NormalizedName\"
+FROM \"AspNetRoles\" AS r
+WHERE r.\"NormalizedName\" = @__normalizedName_0
+LIMIT 1"
+2019-05-25 14:07:38.411 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.\"Id\", u.\"AccessFailedCount\", u.\"ConcurrencyStamp\", u.\"Discriminator\", u.\"Email\", u.\"EmailConfirmed\", u.\"LockoutEnabled\", u.\"LockoutEnd\", u.\"NormalizedEmail\", u.\"NormalizedUserName\", u.\"PasswordHash\", u.\"PhoneNumber\", u.\"PhoneNumberConfirmed\", u.\"SecurityStamp\", u.\"TwoFactorEnabled\", u.\"UserName\", u.\"Data\", u.\"DateOfBirth\", u.\"FirstName\", u.\"LastName\", u.\"Role\", u.\"UserId\"
+FROM \"AspNetUsers\" AS u
+WHERE (u.\"Discriminator\" = 'UserInfoEntity') AND (u.\"NormalizedUserName\" = @__normalizedUserName_0)
+LIMIT 1"
+2019-05-25 14:07:39.701 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+2019-05-25 14:07:40.376 +03:00 [Information] Request finished in 682.3ms 200 text/html
+2019-05-25 14:07:40.722 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+2019-05-25 14:07:41.169 +03:00 [Information] Request finished in 447.4071ms 200 application/json;charset=utf-8
+2019-05-25 14:07:58.031 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Authorization application/json 37
+2019-05-25 14:07:58.106 +03:00 [Information] Route matched with "{action = \"AuthorizationAsync\", controller = \"Authorization\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:07:58.268 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.UserLoginModel"]) - Validation state: Valid
+2019-05-25 14:07:58.276 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:07:58.294 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?' (Size = 256), @__password_1='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND ((r.\"UserName\" = @__username_0) AND (r.\"PasswordHash\" = @__password_1))
+LIMIT 1"
+2019-05-25 14:07:58.354 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 78.9553ms.
+2019-05-25 14:07:58.373 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.AuthorizationResponse"'.
+2019-05-25 14:07:58.403 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)" in 281.0051ms
+2019-05-25 14:07:58.415 +03:00 [Information] Request finished in 382.6026ms 200 application/json; charset=utf-8
+2019-05-25 14:07:58.522 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Connected  
+2019-05-25 14:07:58.532 +03:00 [Information] Route matched with "{action = \"GetConnectionAsync\", controller = \"Connected\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:07:58.588 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:07:58.605 +03:00 [Information] Authorization was successful.
+2019-05-25 14:07:58.618 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)" - Validation state: Valid
+2019-05-25 14:07:58.630 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 8.9686ms.
+2019-05-25 14:07:58.633 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.Connected"'.
+2019-05-25 14:07:58.636 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)" in 102.1642ms
+2019-05-25 14:07:58.639 +03:00 [Information] Request finished in 116.2101ms 200 application/json; charset=utf-8
+2019-05-25 14:07:58.669 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:07:58.689 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:07:58.695 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:07:58.699 +03:00 [Information] Authorization was successful.
+2019-05-25 14:07:58.734 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:07:58.747 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:07:58.764 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:07:58.792 +03:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:07:58.802 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:07:58.806 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 68.9359ms.
+2019-05-25 14:07:58.809 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:07:58.828 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 135.1032ms
+2019-05-25 14:07:58.831 +03:00 [Information] Request finished in 162.07ms 200 application/json; charset=utf-8
+2019-05-25 14:07:58.868 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/CountMessages application/json 67
+2019-05-25 14:07:58.876 +03:00 [Information] Route matched with "{action = \"CountMessagesAsync\", controller = \"CountMessages\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:07:58.879 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:07:58.881 +03:00 [Information] Authorization was successful.
+2019-05-25 14:07:58.900 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.CountMessageForPersonalPage"]) - Validation state: Valid
+2019-05-25 14:07:58.906 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:07:58.919 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"FirstUserInfoId\", p.\"FirstUserInfoId1\", p.\"IsActive\", p.\"SecondUserInfoId\", p.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS p"
+2019-05-25 14:07:58.926 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 22.235ms.
+2019-05-25 14:07:58.930 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.CountMessageForPersonalPage"'.
+2019-05-25 14:07:58.935 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)" in 56.1209ms
+2019-05-25 14:07:58.943 +03:00 [Information] Request finished in 69.1305ms 200 application/json; charset=utf-8
+2019-05-25 14:08:12.067 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Authorization application/json 41
+2019-05-25 14:08:12.070 +03:00 [Information] Route matched with "{action = \"AuthorizationAsync\", controller = \"Authorization\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:08:12.077 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.UserLoginModel"]) - Validation state: Valid
+2019-05-25 14:08:12.081 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:08:12.087 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?' (Size = 256), @__password_1='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND ((r.\"UserName\" = @__username_0) AND (r.\"PasswordHash\" = @__password_1))
+LIMIT 1"
+2019-05-25 14:08:12.090 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 10.0312ms.
+2019-05-25 14:08:12.093 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.AuthorizationResponse"'.
+2019-05-25 14:08:12.095 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.AuthorizationController.AuthorizationAsync (GraduateWork.Server.AspNetCore)" in 23.4085ms
+2019-05-25 14:08:12.098 +03:00 [Information] Request finished in 32.9828ms 200 application/json; charset=utf-8
+2019-05-25 14:08:12.323 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Connected  
+2019-05-25 14:08:12.326 +03:00 [Information] Route matched with "{action = \"GetConnectionAsync\", controller = \"Connected\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:08:12.329 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:08:12.332 +03:00 [Information] Authorization was successful.
+2019-05-25 14:08:12.334 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)" - Validation state: Valid
+2019-05-25 14:08:12.337 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.2693ms.
+2019-05-25 14:08:12.339 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.Connected"'.
+2019-05-25 14:08:12.342 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.ConnectedController.GetConnectionAsync (GraduateWork.Server.AspNetCore)" in 13.1064ms
+2019-05-25 14:08:12.345 +03:00 [Information] Request finished in 21.6356ms 200 application/json; charset=utf-8
+2019-05-25 14:08:12.374 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:08:12.376 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:08:12.379 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:08:12.382 +03:00 [Information] Authorization was successful.
+2019-05-25 14:08:12.386 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:08:12.389 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:08:12.395 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:08:12.403 +03:00 [Information] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:08:12.406 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 17.1994ms.
+2019-05-25 14:08:12.409 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:08:12.413 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 33.5618ms
+2019-05-25 14:08:12.416 +03:00 [Information] Request finished in 41.2541ms 200 application/json; charset=utf-8
+2019-05-25 14:08:12.448 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/CountMessages application/json 67
+2019-05-25 14:08:12.451 +03:00 [Information] Route matched with "{action = \"CountMessagesAsync\", controller = \"CountMessages\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:08:12.454 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:08:12.457 +03:00 [Information] Authorization was successful.
+2019-05-25 14:08:12.461 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.CountMessageForPersonalPage"]) - Validation state: Valid
+2019-05-25 14:08:12.464 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:08:12.469 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"FirstUserInfoId\", p.\"FirstUserInfoId1\", p.\"IsActive\", p.\"SecondUserInfoId\", p.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS p"
+2019-05-25 14:08:12.471 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 7.4234ms.
+2019-05-25 14:08:12.474 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.CountMessageForPersonalPage"'.
+2019-05-25 14:08:12.477 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.CountMessagesController.CountMessagesAsync (GraduateWork.Server.AspNetCore)" in 22.901ms
+2019-05-25 14:08:12.480 +03:00 [Information] Request finished in 31.305ms 200 application/json; charset=utf-8
+2019-05-25 14:08:18.628 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:08:18.632 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:08:18.636 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:08:18.639 +03:00 [Information] Authorization was successful.
+2019-05-25 14:08:18.646 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:08:18.650 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:08:18.657 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:08:18.667 +03:00 [Information] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:08:18.679 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:08:18.682 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 32.7639ms.
+2019-05-25 14:08:18.685 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:08:18.688 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 53.3971ms
+2019-05-25 14:08:18.695 +03:00 [Information] Request finished in 62.797ms 200 application/json; charset=utf-8
+2019-05-25 14:08:20.132 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/HistoryChats application/json 74
+2019-05-25 14:08:20.145 +03:00 [Information] Route matched with "{action = \"HistoryChatsAsync\", controller = \"HistoryChats\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:08:20.148 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:08:20.150 +03:00 [Information] Authorization was successful.
+2019-05-25 14:08:20.158 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.SavedChats"]) - Validation state: Valid
+2019-05-25 14:08:20.168 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:08:20.183 +03:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"FirstUserInfoId\", r.\"FirstUserInfoId1\", r.\"IsActive\", r.\"SecondUserInfoId\", r.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS r
+WHERE r.\"FirstUserInfoId\" = @__userId_0"
+2019-05-25 14:08:20.193 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"FirstUserInfoId\", r.\"FirstUserInfoId1\", r.\"IsActive\", r.\"SecondUserInfoId\", r.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS r
+WHERE r.\"SecondUserInfoId\" = @__userId_0"
+2019-05-25 14:08:20.196 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 35.555ms.
+2019-05-25 14:08:20.199 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.SavedChats"'.
+2019-05-25 14:08:20.203 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)" in 55.3311ms
+2019-05-25 14:08:20.206 +03:00 [Information] Request finished in 74.8242ms 200 application/json; charset=utf-8
+2019-05-25 14:08:20.212 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:08:20.214 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:08:20.217 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:08:20.220 +03:00 [Information] Authorization was successful.
+2019-05-25 14:08:20.224 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:08:20.227 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:08:20.232 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:08:20.237 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:08:20.242 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:08:20.245 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 18.5281ms.
+2019-05-25 14:08:20.248 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:08:20.251 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 33.6252ms
+2019-05-25 14:08:20.257 +03:00 [Information] Request finished in 42.3585ms 200 application/json; charset=utf-8
+2019-05-25 14:08:51.842 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/chatHub/negotiate  0
+2019-05-25 14:08:51.868 +03:00 [Information] Request finished in 23.7803ms 200 application/json
+2019-05-25 14:08:51.940 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/chatHub?id=SOdOSm6R70BTWKA9sCyKng  
+2019-05-25 14:08:52.095 +03:00 [Information] Completed connection handshake. Using HubProtocol '"json"'.
+2019-05-25 14:09:59.446 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:09:59.451 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:09:59.459 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:09:59.462 +03:00 [Information] Authorization was successful.
+2019-05-25 14:09:59.473 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:09:59.477 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:09:59.487 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:09:59.492 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:09:59.495 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 19.7165ms.
+2019-05-25 14:09:59.498 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:09:59.502 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 47.3891ms
+2019-05-25 14:09:59.506 +03:00 [Information] Request finished in 59.1823ms 200 application/json; charset=utf-8
+2019-05-25 14:10:01.092 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/HistoryChats application/json 74
+2019-05-25 14:10:01.095 +03:00 [Information] Route matched with "{action = \"HistoryChatsAsync\", controller = \"HistoryChats\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:10:01.099 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:10:01.101 +03:00 [Information] Authorization was successful.
+2019-05-25 14:10:01.106 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.SavedChats"]) - Validation state: Valid
+2019-05-25 14:10:01.109 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:10:01.115 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"FirstUserInfoId\", r.\"FirstUserInfoId1\", r.\"IsActive\", r.\"SecondUserInfoId\", r.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS r
+WHERE r.\"FirstUserInfoId\" = @__userId_0"
+2019-05-25 14:10:01.120 +03:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"FirstUserInfoId\", r.\"FirstUserInfoId1\", r.\"IsActive\", r.\"SecondUserInfoId\", r.\"SecondUserInfoId1\"
+FROM \"PrivateChats\" AS r
+WHERE r.\"SecondUserInfoId\" = @__userId_0"
+2019-05-25 14:10:01.126 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 16.9513ms.
+2019-05-25 14:10:01.129 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.SavedChats"'.
+2019-05-25 14:10:01.132 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.HistoryChatsController.HistoryChatsAsync (GraduateWork.Server.AspNetCore)" in 34.3055ms
+2019-05-25 14:10:01.136 +03:00 [Information] Request finished in 41.8447ms 200 application/json; charset=utf-8
+2019-05-25 14:10:01.141 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/InfoAboutUsers application/json 219
+2019-05-25 14:10:01.144 +03:00 [Information] Route matched with "{action = \"GetUserByIdAsync\", controller = \"InfoAboutUsers\"}". Executing action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)"
+2019-05-25 14:10:01.147 +03:00 [Information] Successfully validated the token.
+2019-05-25 14:10:01.149 +03:00 [Information] Authorization was successful.
+2019-05-25 14:10:01.311 +03:00 [Information] Executing action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" with arguments (["GraduateWork.Common.CommonProject.Models.UsersInfoModel"]) - Validation state: Valid
+2019-05-25 14:10:01.315 +03:00 [Information] Entity Framework Core "2.2.3-servicing-35854" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "MigrationsAssembly=GraduateWork.Server.Data "
+2019-05-25 14:10:01.320 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"AccessFailedCount\", r.\"ConcurrencyStamp\", r.\"Discriminator\", r.\"Email\", r.\"EmailConfirmed\", r.\"LockoutEnabled\", r.\"LockoutEnd\", r.\"NormalizedEmail\", r.\"NormalizedUserName\", r.\"PasswordHash\", r.\"PhoneNumber\", r.\"PhoneNumberConfirmed\", r.\"SecurityStamp\", r.\"TwoFactorEnabled\", r.\"UserName\", r.\"Data\", r.\"DateOfBirth\", r.\"FirstName\", r.\"LastName\", r.\"Role\", r.\"UserId\"
+FROM \"AspNetUsers\" AS r
+WHERE (r.\"Discriminator\" = 'UserInfoEntity') AND (r.\"Id\" = @__id_0)
+LIMIT 1"
+2019-05-25 14:10:01.324 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Discriminator\", a.\"Email\", a.\"EmailConfirmed\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\", a.\"Data\", a.\"DateOfBirth\", a.\"FirstName\", a.\"LastName\", a.\"Role\", a.\"UserId\"
+FROM \"AspNetUsers\" AS a
+WHERE a.\"Discriminator\" = 'UserInfoEntity'"
+2019-05-25 14:10:01.327 +03:00 [Information] Executed action method "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 13.5364ms.
+2019-05-25 14:10:01.332 +03:00 [Information] Executing ObjectResult, writing value of type '"GraduateWork.Common.CommonProject.Models.UsersInfoModel"'.
+2019-05-25 14:10:01.336 +03:00 [Information] Executed action "GraduateWork.Server.AspNetCore.Controllers.InfoAboutUsersController.GetUserByIdAsync (GraduateWork.Server.AspNetCore)" in 187.8808ms
+2019-05-25 14:10:01.342 +03:00 [Information] Request finished in 197.4447ms 200 application/json; charset=utf-8
+2019-05-25 14:10:27.887 +03:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/chatHub/negotiate  0
+2019-05-25 14:10:27.892 +03:00 [Information] Request finished in 3.1468ms 200 application/json
+2019-05-25 14:10:27.976 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/chatHub?id=K8mEU_WLgml9u7dLHBFuZg  
+2019-05-25 14:10:28.065 +03:00 [Information] Completed connection handshake. Using HubProtocol '"json"'.

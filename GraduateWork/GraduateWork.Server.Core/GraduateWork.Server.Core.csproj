@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GraduateWork.Common.CommonProject\GraduateWork.Common.CommonProject.csproj" />
+    <ProjectReference Include="..\GraduateWork.Server.Common\GraduateWork.Server.Common.csproj" />
+    <ProjectReference Include="..\GraduateWork.Server.Data\GraduateWork.Server.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
